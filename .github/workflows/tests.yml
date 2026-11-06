@@ -22,3 +22,6 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Exercise CLI with synthetic evidence
         run: identity-investigator samples/synthetic_identity_events.csv --out reports
+
+      - name: Reproduce synthetic evaluation and error report
+        run: python -m evaluation.evaluate
