@@ -1,0 +1,37 @@
+name: Import packaged source
+on:
+  push:
+    branches: [main]
+    paths:
+      - .source-package.b64
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify and unpack trusted source bundle
+        run: |
+          python - <<'PY'
+          import base64, hashlib, io, lzma, pathlib, tarfile
+          raw = base64.b64decode(pathlib.Path(".source-package.b64").read_text(), validate=True)
+          expected = "d1987a021300089bd51c8192307bb8a17c9ceca74eba756b36345c01c6f7dd86"
+          assert hashlib.sha256(raw).hexdigest() == expected, "Source bundle checksum mismatch"
+          with tarfile.open(fileobj=io.BytesIO(lzma.decompress(raw)), mode="r:") as archive:
+              for member in archive:
+                  path = pathlib.PurePosixPath(member.name)
+                  assert member.isfile() and not path.is_absolute() and ".." not in path.parts
+                  output = pathlib.Path(*path.parts)
+                  output.parent.mkdir(parents=True, exist_ok=True)
+                  output.write_bytes(archive.extractfile(member).read())
+          PY
+      - name: Commit unpacked source and remove bootstrap files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm -f .source-package.b64 .github/workflows/import.yml
+          git add -A
+          git commit -m "Publish AI Identity Incident Investigator v0.1.0"
+          git push origin main
