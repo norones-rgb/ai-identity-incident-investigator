@@ -1,0 +1,67 @@
+{
+  "dataset": "samples/synthetic_identity_events.json",
+  "description": "Expected findings authored for this small synthetic demo. Not an independent real-world validation dataset.",
+  "expected_incidents": [
+    {
+      "rule_id": "CONNECTOR_OUTAGE",
+      "subject": "SYSTEM",
+      "evidence": [
+        "evt-0001",
+        "evt-0002",
+        "evt-0003",
+        "evt-0004",
+        "evt-0005",
+        "evt-0006"
+      ]
+    },
+    {
+      "rule_id": "OFFBOARDING_GAP",
+      "subject": "synthetic.user07@example.invalid",
+      "evidence": [
+        "evt-0007",
+        "evt-0008",
+        "evt-0009"
+      ]
+    },
+    {
+      "rule_id": "AUTH_FAILURE_BURST",
+      "subject": "synthetic.user09@example.invalid",
+      "evidence": [
+        "evt-0010",
+        "evt-0011",
+        "evt-0012",
+        "evt-0013",
+        "evt-0014",
+        "evt-0015",
+        "evt-0016"
+      ]
+    },
+    {
+      "rule_id": "MFA_PRESSURE",
+      "subject": "synthetic.user10@example.invalid",
+      "evidence": [
+        "evt-0017",
+        "evt-0018",
+        "evt-0019",
+        "evt-0020",
+        "evt-0021",
+        "evt-0022",
+        "evt-0023"
+      ]
+    },
+    {
+      "rule_id": "DISABLED_ACCOUNT_SIGNIN",
+      "subject": "synthetic.user12@example.invalid",
+      "evidence": [
+        "evt-0024",
+        "evt-0025"
+      ]
+    }
+  ],
+  "negative_control_event_ids": [
+    "evt-0026",
+    "evt-0027",
+    "evt-0028",
+    "evt-0029"
+  ]
+}
