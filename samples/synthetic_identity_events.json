@@ -1,0 +1,342 @@
+{
+  "events": [
+    {
+      "event_id": "evt-0001",
+      "timestamp": "2026-11-03T08:05:00Z",
+      "source": "NetIQ IDM",
+      "subject": "SYSTEM",
+      "action": "connector_disabled",
+      "outcome": "info",
+      "resource": "AD Connector",
+      "actor": "idm-health",
+      "metadata": {
+        "connector": "NETIQ_AD"
+      }
+    },
+    {
+      "event_id": "evt-0002",
+      "timestamp": "2026-11-03T08:07:00Z",
+      "source": "NetIQ IDM",
+      "subject": "synthetic.user01@example.invalid",
+      "action": "provisioning_failed",
+      "outcome": "failure",
+      "resource": "Active Directory",
+      "actor": "idm-service",
+      "metadata": {
+        "connector": "NETIQ_AD",
+        "retry": 0
+      }
+    },
+    {
+      "event_id": "evt-0003",
+      "timestamp": "2026-11-03T08:08:00Z",
+      "source": "NetIQ IDM",
+      "subject": "synthetic.user02@example.invalid",
+      "action": "provisioning_failed",
+      "outcome": "failure",
+      "resource": "Active Directory",
+      "actor": "idm-service",
+      "metadata": {
+        "connector": "NETIQ_AD",
+        "retry": 1
+      }
+    },
+    {
+      "event_id": "evt-0004",
+      "timestamp": "2026-11-03T08:09:00Z",
+      "source": "NetIQ IDM",
+      "subject": "synthetic.user03@example.invalid",
+      "action": "provisioning_failed",
+      "outcome": "failure",
+      "resource": "Active Directory",
+      "actor": "idm-service",
+      "metadata": {
+        "connector": "NETIQ_AD",
+        "retry": 2
+      }
+    },
+    {
+      "event_id": "evt-0005",
+      "timestamp": "2026-11-03T08:10:00Z",
+      "source": "NetIQ IDM",
+      "subject": "synthetic.user04@example.invalid",
+      "action": "provisioning_failed",
+      "outcome": "failure",
+      "resource": "Active Directory",
+      "actor": "idm-service",
+      "metadata": {
+        "connector": "NETIQ_AD",
+        "retry": 3
+      }
+    },
+    {
+      "event_id": "evt-0006",
+      "timestamp": "2026-11-03T08:11:00Z",
+      "source": "NetIQ IDM",
+      "subject": "synthetic.user05@example.invalid",
+      "action": "provisioning_failed",
+      "outcome": "failure",
+      "resource": "Active Directory",
+      "actor": "idm-service",
+      "metadata": {
+        "connector": "NETIQ_AD",
+        "retry": 4
+      }
+    },
+    {
+      "event_id": "evt-0007",
+      "timestamp": "2026-11-03T08:22:00Z",
+      "source": "Workday",
+      "subject": "synthetic.user07@example.invalid",
+      "action": "user_terminated",
+      "outcome": "success",
+      "resource": "HR employee record",
+      "actor": "hr-system",
+      "metadata": {}
+    },
+    {
+      "event_id": "evt-0008",
+      "timestamp": "2026-11-03T08:27:00Z",
+      "source": "Entra ID",
+      "subject": "synthetic.user07@example.invalid",
+      "action": "authentication_succeeded",
+      "outcome": "success",
+      "resource": "Sample SaaS App",
+      "actor": "synthetic.user07@example.invalid",
+      "metadata": {}
+    },
+    {
+      "event_id": "evt-0009",
+      "timestamp": "2026-11-03T08:35:00Z",
+      "source": "Active Directory",
+      "subject": "synthetic.user07@example.invalid",
+      "action": "privileged_access_granted",
+      "outcome": "success",
+      "resource": "SAMPLE-PRIV-GROUP",
+      "actor": "helpdesk-test",
+      "metadata": {}
+    },
+    {
+      "event_id": "evt-0010",
+      "timestamp": "2026-11-03T08:42:00Z",
+      "source": "Okta",
+      "subject": "synthetic.user09@example.invalid",
+      "action": "authentication_failed",
+      "outcome": "failure",
+      "resource": "Company Portal",
+      "actor": "synthetic.user09@example.invalid",
+      "metadata": {}
+    },
+    {
+      "event_id": "evt-0011",
+      "timestamp": "2026-11-03T08:43:00Z",
+      "source": "Okta",
+      "subject": "synthetic.user09@example.invalid",
+      "action": "authentication_failed",
+      "outcome": "failure",
+      "resource": "Company Portal",
+      "actor": "synthetic.user09@example.invalid",
+      "metadata": {}
+    },
+    {
+      "event_id": "evt-0012",
+      "timestamp": "2026-11-03T08:44:00Z",
+      "source": "Okta",
+      "subject": "synthetic.user09@example.invalid",
+      "action": "authentication_failed",
+      "outcome": "failure",
+      "resource": "Company Portal",
+      "actor": "synthetic.user09@example.invalid",
+      "metadata": {}
+    },
+    {
+      "event_id": "evt-0013",
+      "timestamp": "2026-11-03T08:45:00Z",
+      "source": "Okta",
+      "subject": "synthetic.user09@example.invalid",
+      "action": "authentication_failed",
+      "outcome": "failure",
+      "resource": "Company Portal",
+      "actor": "synthetic.user09@example.invalid",
+      "metadata": {}
+    },
+    {
+      "event_id": "evt-0014",
+      "timestamp": "2026-11-03T08:46:00Z",
+      "source": "Okta",
+      "subject": "synthetic.user09@example.invalid",
+      "action": "authentication_failed",
+      "outcome": "failure",
+      "resource": "Company Portal",
+      "actor": "synthetic.user09@example.invalid",
+      "metadata": {}
+    },
+    {
+      "event_id": "evt-0015",
+      "timestamp": "2026-11-03T08:47:00Z",
+      "source": "Okta",
+      "subject": "synthetic.user09@example.invalid",
+      "action": "authentication_failed",
+      "outcome": "failure",
+      "resource": "Company Portal",
+      "actor": "synthetic.user09@example.invalid",
+      "metadata": {}
+    },
+    {
+      "event_id": "evt-0016",
+      "timestamp": "2026-11-03T08:49:00Z",
+      "source": "Okta",
+      "subject": "synthetic.user09@example.invalid",
+      "action": "authentication_succeeded",
+      "outcome": "success",
+      "resource": "Company Portal",
+      "actor": "synthetic.user09@example.invalid",
+      "metadata": {}
+    },
+    {
+      "event_id": "evt-0017",
+      "timestamp": "2026-11-03T08:52:00Z",
+      "source": "Entra ID",
+      "subject": "synthetic.user10@example.invalid",
+      "action": "mfa_denied",
+      "outcome": "failure",
+      "resource": "Sample CRM",
+      "actor": "synthetic.user10@example.invalid",
+      "metadata": {}
+    },
+    {
+      "event_id": "evt-0018",
+      "timestamp": "2026-11-03T08:54:00Z",
+      "source": "Entra ID",
+      "subject": "synthetic.user10@example.invalid",
+      "action": "mfa_denied",
+      "outcome": "failure",
+      "resource": "Sample CRM",
+      "actor": "synthetic.user10@example.invalid",
+      "metadata": {}
+    },
+    {
+      "event_id": "evt-0019",
+      "timestamp": "2026-11-03T08:56:00Z",
+      "source": "Entra ID",
+      "subject": "synthetic.user10@example.invalid",
+      "action": "mfa_denied",
+      "outcome": "failure",
+      "resource": "Sample CRM",
+      "actor": "synthetic.user10@example.invalid",
+      "metadata": {}
+    },
+    {
+      "event_id": "evt-0020",
+      "timestamp": "2026-11-03T08:58:00Z",
+      "source": "Entra ID",
+      "subject": "synthetic.user10@example.invalid",
+      "action": "mfa_denied",
+      "outcome": "failure",
+      "resource": "Sample CRM",
+      "actor": "synthetic.user10@example.invalid",
+      "metadata": {}
+    },
+    {
+      "event_id": "evt-0021",
+      "timestamp": "2026-11-03T09:00:00Z",
+      "source": "Entra ID",
+      "subject": "synthetic.user10@example.invalid",
+      "action": "mfa_denied",
+      "outcome": "failure",
+      "resource": "Sample CRM",
+      "actor": "synthetic.user10@example.invalid",
+      "metadata": {}
+    },
+    {
+      "event_id": "evt-0022",
+      "timestamp": "2026-11-03T09:02:00Z",
+      "source": "Entra ID",
+      "subject": "synthetic.user10@example.invalid",
+      "action": "mfa_denied",
+      "outcome": "failure",
+      "resource": "Sample CRM",
+      "actor": "synthetic.user10@example.invalid",
+      "metadata": {}
+    },
+    {
+      "event_id": "evt-0023",
+      "timestamp": "2026-11-03T09:03:00Z",
+      "source": "Entra ID",
+      "subject": "synthetic.user10@example.invalid",
+      "action": "mfa_approved",
+      "outcome": "success",
+      "resource": "Sample CRM",
+      "actor": "synthetic.user10@example.invalid",
+      "metadata": {}
+    },
+    {
+      "event_id": "evt-0024",
+      "timestamp": "2026-11-03T09:10:00Z",
+      "source": "Active Directory",
+      "subject": "synthetic.user12@example.invalid",
+      "action": "account_disabled",
+      "outcome": "success",
+      "resource": "AD Domain",
+      "actor": "hr-system",
+      "metadata": {}
+    },
+    {
+      "event_id": "evt-0025",
+      "timestamp": "2026-11-03T09:13:00Z",
+      "source": "Entra ID",
+      "subject": "synthetic.user12@example.invalid",
+      "action": "authentication_succeeded",
+      "outcome": "success",
+      "resource": "Sample SaaS App",
+      "actor": "synthetic.user12@example.invalid",
+      "metadata": {}
+    },
+    {
+      "event_id": "evt-0026",
+      "timestamp": "2026-11-03T09:20:00Z",
+      "source": "Okta",
+      "subject": "synthetic.user14@example.invalid",
+      "action": "authentication_failed",
+      "outcome": "failure",
+      "resource": "Company Portal",
+      "actor": "",
+      "metadata": {}
+    },
+    {
+      "event_id": "evt-0027",
+      "timestamp": "2026-11-03T09:23:00Z",
+      "source": "Okta",
+      "subject": "synthetic.user14@example.invalid",
+      "action": "authentication_succeeded",
+      "outcome": "success",
+      "resource": "Company Portal",
+      "actor": "",
+      "metadata": {}
+    },
+    {
+      "event_id": "evt-0028",
+      "timestamp": "2026-11-03T09:27:00Z",
+      "source": "Entra ID",
+      "subject": "synthetic.user15@example.invalid",
+      "action": "authentication_succeeded",
+      "outcome": "success",
+      "resource": "Sample SaaS App",
+      "actor": "",
+      "metadata": {}
+    },
+    {
+      "event_id": "evt-0029",
+      "timestamp": "2026-11-03T09:30:00Z",
+      "source": "NetIQ IDM",
+      "subject": "synthetic.user16@example.invalid",
+      "action": "provisioning_succeeded",
+      "outcome": "success",
+      "resource": "Active Directory",
+      "actor": "",
+      "metadata": {
+        "connector": "OTHER_CONNECTOR"
+      }
+    }
+  ]
+}

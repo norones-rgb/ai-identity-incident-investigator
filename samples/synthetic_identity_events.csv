@@ -1,0 +1,30 @@
+event_id,timestamp,source,subject,action,outcome,resource,actor,metadata_json
+evt-0001,2026-11-03T08:05:00Z,NetIQ IDM,SYSTEM,connector_disabled,info,AD Connector,idm-health,"{""connector"": ""NETIQ_AD""}"
+evt-0002,2026-11-03T08:07:00Z,NetIQ IDM,synthetic.user01@example.invalid,provisioning_failed,failure,Active Directory,idm-service,"{""connector"": ""NETIQ_AD"", ""retry"": 0}"
+evt-0003,2026-11-03T08:08:00Z,NetIQ IDM,synthetic.user02@example.invalid,provisioning_failed,failure,Active Directory,idm-service,"{""connector"": ""NETIQ_AD"", ""retry"": 1}"
+evt-0004,2026-11-03T08:09:00Z,NetIQ IDM,synthetic.user03@example.invalid,provisioning_failed,failure,Active Directory,idm-service,"{""connector"": ""NETIQ_AD"", ""retry"": 2}"
+evt-0005,2026-11-03T08:10:00Z,NetIQ IDM,synthetic.user04@example.invalid,provisioning_failed,failure,Active Directory,idm-service,"{""connector"": ""NETIQ_AD"", ""retry"": 3}"
+evt-0006,2026-11-03T08:11:00Z,NetIQ IDM,synthetic.user05@example.invalid,provisioning_failed,failure,Active Directory,idm-service,"{""connector"": ""NETIQ_AD"", ""retry"": 4}"
+evt-0007,2026-11-03T08:22:00Z,Workday,synthetic.user07@example.invalid,user_terminated,success,HR employee record,hr-system,{}
+evt-0008,2026-11-03T08:27:00Z,Entra ID,synthetic.user07@example.invalid,authentication_succeeded,success,Sample SaaS App,synthetic.user07@example.invalid,{}
+evt-0009,2026-11-03T08:35:00Z,Active Directory,synthetic.user07@example.invalid,privileged_access_granted,success,SAMPLE-PRIV-GROUP,helpdesk-test,{}
+evt-0010,2026-11-03T08:42:00Z,Okta,synthetic.user09@example.invalid,authentication_failed,failure,Company Portal,synthetic.user09@example.invalid,{}
+evt-0011,2026-11-03T08:43:00Z,Okta,synthetic.user09@example.invalid,authentication_failed,failure,Company Portal,synthetic.user09@example.invalid,{}
+evt-0012,2026-11-03T08:44:00Z,Okta,synthetic.user09@example.invalid,authentication_failed,failure,Company Portal,synthetic.user09@example.invalid,{}
+evt-0013,2026-11-03T08:45:00Z,Okta,synthetic.user09@example.invalid,authentication_failed,failure,Company Portal,synthetic.user09@example.invalid,{}
+evt-0014,2026-11-03T08:46:00Z,Okta,synthetic.user09@example.invalid,authentication_failed,failure,Company Portal,synthetic.user09@example.invalid,{}
+evt-0015,2026-11-03T08:47:00Z,Okta,synthetic.user09@example.invalid,authentication_failed,failure,Company Portal,synthetic.user09@example.invalid,{}
+evt-0016,2026-11-03T08:49:00Z,Okta,synthetic.user09@example.invalid,authentication_succeeded,success,Company Portal,synthetic.user09@example.invalid,{}
+evt-0017,2026-11-03T08:52:00Z,Entra ID,synthetic.user10@example.invalid,mfa_denied,failure,Sample CRM,synthetic.user10@example.invalid,{}
+evt-0018,2026-11-03T08:54:00Z,Entra ID,synthetic.user10@example.invalid,mfa_denied,failure,Sample CRM,synthetic.user10@example.invalid,{}
+evt-0019,2026-11-03T08:56:00Z,Entra ID,synthetic.user10@example.invalid,mfa_denied,failure,Sample CRM,synthetic.user10@example.invalid,{}
+evt-0020,2026-11-03T08:58:00Z,Entra ID,synthetic.user10@example.invalid,mfa_denied,failure,Sample CRM,synthetic.user10@example.invalid,{}
+evt-0021,2026-11-03T09:00:00Z,Entra ID,synthetic.user10@example.invalid,mfa_denied,failure,Sample CRM,synthetic.user10@example.invalid,{}
+evt-0022,2026-11-03T09:02:00Z,Entra ID,synthetic.user10@example.invalid,mfa_denied,failure,Sample CRM,synthetic.user10@example.invalid,{}
+evt-0023,2026-11-03T09:03:00Z,Entra ID,synthetic.user10@example.invalid,mfa_approved,success,Sample CRM,synthetic.user10@example.invalid,{}
+evt-0024,2026-11-03T09:10:00Z,Active Directory,synthetic.user12@example.invalid,account_disabled,success,AD Domain,hr-system,{}
+evt-0025,2026-11-03T09:13:00Z,Entra ID,synthetic.user12@example.invalid,authentication_succeeded,success,Sample SaaS App,synthetic.user12@example.invalid,{}
+evt-0026,2026-11-03T09:20:00Z,Okta,synthetic.user14@example.invalid,authentication_failed,failure,Company Portal,,{}
+evt-0027,2026-11-03T09:23:00Z,Okta,synthetic.user14@example.invalid,authentication_succeeded,success,Company Portal,,{}
+evt-0028,2026-11-03T09:27:00Z,Entra ID,synthetic.user15@example.invalid,authentication_succeeded,success,Sample SaaS App,,{}
+evt-0029,2026-11-03T09:30:00Z,NetIQ IDM,synthetic.user16@example.invalid,provisioning_succeeded,success,Active Directory,,"{""connector"": ""OTHER_CONNECTOR""}"

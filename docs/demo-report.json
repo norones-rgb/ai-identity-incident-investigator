@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-11-06T21:19:55.010133Z",
+  "read_only": true,
+  "input_event_count": 29,
+  "incident_count": 5,
+  "by_severity": {
+    "critical": 1,
+    "high": 3,
+    "medium": 1
+  },
+  "incidents": [
+    {
+      "incident_id": "INC-07E1407337C6",
+      "rule_id": "OFFBOARDING_GAP",
+      "title": "Post-termination access detected",
+      "severity": "critical",
+      "confidence": "high",
+      "subject": "synthetic.user07@example.invalid",
+      "start": "2026-11-03T08:22:00Z",
+      "end": "2026-11-03T08:35:00Z",
+      "summary": "An identity recorded as terminated had subsequent successful access activity.",
+      "recommendation": "Confirm HR effective time and approved exceptions; verify deprovisioning and session revocation with asset owners.",
+      "evidence": [
+        "evt-0007",
+        "evt-0008",
+        "evt-0009"
+      ],
+      "sources": [
+        "Active Directory",
+        "Entra ID",
+        "Workday"
+      ],
+      "narrative": "Observed pattern: An identity recorded as terminated had subsequent successful access activity. There are 3 supporting events from 3 source system(s). This alert establishes a correlation, not a confirmed root cause. Suggested next step: Confirm HR effective time and approved exceptions; verify deprovisioning and session revocation with asset owners."
+    },
+    {
+      "incident_id": "INC-50941BAE07EA",
+      "rule_id": "CONNECTOR_OUTAGE",
+      "title": "Potential identity connector outage",
+      "severity": "high",
+      "confidence": "high",
+      "subject": "SYSTEM",
+      "start": "2026-11-03T08:05:00Z",
+      "end": "2026-11-03T08:11:00Z",
+      "summary": "A connector was disabled and multiple downstream provisioning attempts failed.",
+      "recommendation": "Verify connector health and queue state; assess affected identities and follow the approved restoration runbook.",
+      "evidence": [
+        "evt-0001",
+        "evt-0002",
+        "evt-0003",
+        "evt-0004",
+        "evt-0005",
+        "evt-0006"
+      ],
+      "sources": [
+        "NetIQ IDM"
+      ],
+      "narrative": "Observed pattern: A connector was disabled and multiple downstream provisioning attempts failed. There are 6 supporting events from 1 source system(s). This alert establishes a correlation, not a confirmed root cause. Suggested next step: Verify connector health and queue state; assess affected identities and follow the approved restoration runbook."
+    },
+    {
+      "incident_id": "INC-12A87F1CCBF0",
+      "rule_id": "MFA_PRESSURE",
+      "title": "MFA denial burst followed by approval",
+      "severity": "high",
+      "confidence": "medium",
+      "subject": "synthetic.user10@example.invalid",
+      "start": "2026-11-03T08:52:00Z",
+      "end": "2026-11-03T09:03:00Z",
+      "summary": "Repeated MFA denials were followed by an approval.",
+      "recommendation": "Confirm whether the user initiated the MFA flow; review MFA method, originating device and access context.",
+      "evidence": [
+        "evt-0017",
+        "evt-0018",
+        "evt-0019",
+        "evt-0020",
+        "evt-0021",
+        "evt-0022",
+        "evt-0023"
+      ],
+      "sources": [
+        "Entra ID"
+      ],
+      "narrative": "Observed pattern: Repeated MFA denials were followed by an approval. There are 7 supporting events from 1 source system(s). This alert establishes a correlation, not a confirmed root cause. Suggested next step: Confirm whether the user initiated the MFA flow; review MFA method, originating device and access context."
+    },
+    {
+      "incident_id": "INC-1271CFB44A60",
+      "rule_id": "DISABLED_ACCOUNT_SIGNIN",
+      "title": "Successful sign-in after account disable",
+      "severity": "high",
+      "confidence": "medium",
+      "subject": "synthetic.user12@example.invalid",
+      "start": "2026-11-03T09:10:00Z",
+      "end": "2026-11-03T09:13:00Z",
+      "summary": "A sign-in succeeded after an account-disable event.",
+      "recommendation": "Verify disable propagation, application sessions and identity mapping across source systems.",
+      "evidence": [
+        "evt-0024",
+        "evt-0025"
+      ],
+      "sources": [
+        "Active Directory",
+        "Entra ID"
+      ],
+      "narrative": "Observed pattern: A sign-in succeeded after an account-disable event. There are 2 supporting events from 2 source system(s). This alert establishes a correlation, not a confirmed root cause. Suggested next step: Verify disable propagation, application sessions and identity mapping across source systems."
+    },
+    {
+      "incident_id": "INC-00CF65199550",
+      "rule_id": "AUTH_FAILURE_BURST",
+      "title": "Authentication failure burst followed by success",
+      "severity": "medium",
+      "confidence": "medium",
+      "subject": "synthetic.user09@example.invalid",
+      "start": "2026-11-03T08:42:00Z",
+      "end": "2026-11-03T08:49:00Z",
+      "summary": "Repeated authentication failures were followed by success.",
+      "recommendation": "Review device, IP, sign-in context and account ownership; do not assume malicious activity from counts alone.",
+      "evidence": [
+        "evt-0010",
+        "evt-0011",
+        "evt-0012",
+        "evt-0013",
+        "evt-0014",
+        "evt-0015",
+        "evt-0016"
+      ],
+      "sources": [
+        "Okta"
+      ],
+      "narrative": "Observed pattern: Repeated authentication failures were followed by success. There are 7 supporting events from 1 source system(s). This alert establishes a correlation, not a confirmed root cause. Suggested next step: Review device, IP, sign-in context and account ownership; do not assume malicious activity from counts alone."
+    }
+  ]
+}

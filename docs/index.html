@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>Identity Incident Investigation — Synthetic Demo</title>
+<style>
+:root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#f1f3f8;background:#111827}
+*{box-sizing:border-box}body{margin:0}main{max-width:1080px;margin:auto;padding:40px 22px 80px}
+.hero{padding:30px;border:1px solid #364152;border-radius:14px;background:linear-gradient(110deg,#1f2937,#111827)}
+h1{font-size:clamp(1.65rem,4vw,2.5rem);margin:0 0 10px}.eyebrow{color:#b3c0d6;font-size:.75rem;letter-spacing:.15em;text-transform:uppercase}
+.sub{color:#b8c1cd;line-height:1.55}.stats{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0}
+.stat{background:#1d2939;border:1px solid #364152;border-radius:10px;min-width:170px;flex:1;padding:16px}.num{font-size:2rem;font-weight:700;display:block}.stat small{color:#c3cbd6}
+h2{font-size:1.15rem;margin:10px 0}.incident{margin:16px 0;padding:23px;background:#1b2432;border:1px solid #394557;border-radius:12px;line-height:1.55}
+.incident header{display:flex;gap:10px;align-items:center}.tag{display:inline-block;border-radius:4px;padding:3px 9px;font-size:.72rem;font-weight:800;letter-spacing:.04em;color:#fff}
+.critical{background:#9f253c}.high{background:#a54d22}.medium{background:#8a6a1a}.low{background:#325b68}
+.rule{color:#afbbc9;font-size:.76rem;letter-spacing:.04em}.meta{font-size:.85rem;color:#b8c6d5}.incident p{overflow-wrap:anywhere}details{border-top:1px solid #3c4857;margin-top:12px;padding-top:12px}summary{cursor:pointer;color:#d6e4fa}
+footer{color:#a6b0c0;font-size:.82rem;margin-top:24px}.empty{padding:24px;background:#263248;border-radius:8px}
+</style></head><body><main><section class="hero"><div class="eyebrow">IAM Security Engineering / Portfolio Demo</div>
+<h1>Identity Incident Investigator</h1><p class="sub">Read-only correlation across identity systems. Deterministic evidence first; optional local AI hypotheses. This sample report uses fictional data.</p></section>
+<section class="stats"><div class="stat"><span class="num">29</span><small>Events ingested</small></div>
+<div class="stat"><span class="num">5</span><small>Incident patterns</small></div>
+<div class="stat"><span class="num">4</span><small>High / critical</small></div></section>
+<h2>Evidence-backed findings</h2><article class="incident">
+  <header><span class="tag critical">CRITICAL</span><span class="rule">OFFBOARDING_GAP</span></header>
+  <h2>Post-termination access detected</h2>
+  <p class="meta"><strong>Subject:</strong> synthetic.user07@example.invalid &nbsp; <strong>Confidence:</strong> high &nbsp; <strong>Window:</strong> 2026-11-03T08:22:00Z – 2026-11-03T08:35:00Z</p>
+  <p>An identity recorded as terminated had subsequent successful access activity.</p><p><strong>Next verification:</strong> Confirm HR effective time and approved exceptions; verify deprovisioning and session revocation with asset owners.</p>
+  <details><summary>Evidence (3 events)</summary><p>evt-0007, evt-0008, evt-0009</p><p>Sources: Active Directory, Entra ID, Workday</p></details>
+  <details><summary>Analyst narrative</summary><p>Observed pattern: An identity recorded as terminated had subsequent successful access activity. There are 3 supporting events from 3 source system(s). This alert establishes a correlation, not a confirmed root cause. Suggested next step: Confirm HR effective time and approved exceptions; verify deprovisioning and session revocation with asset owners.</p></details>
+</article>
+<article class="incident">
+  <header><span class="tag high">HIGH</span><span class="rule">CONNECTOR_OUTAGE</span></header>
+  <h2>Potential identity connector outage</h2>
+  <p class="meta"><strong>Subject:</strong> SYSTEM &nbsp; <strong>Confidence:</strong> high &nbsp; <strong>Window:</strong> 2026-11-03T08:05:00Z – 2026-11-03T08:11:00Z</p>
+  <p>A connector was disabled and multiple downstream provisioning attempts failed.</p><p><strong>Next verification:</strong> Verify connector health and queue state; assess affected identities and follow the approved restoration runbook.</p>
+  <details><summary>Evidence (6 events)</summary><p>evt-0001, evt-0002, evt-0003, evt-0004, evt-0005, evt-0006</p><p>Sources: NetIQ IDM</p></details>
+  <details><summary>Analyst narrative</summary><p>Observed pattern: A connector was disabled and multiple downstream provisioning attempts failed. There are 6 supporting events from 1 source system(s). This alert establishes a correlation, not a confirmed root cause. Suggested next step: Verify connector health and queue state; assess affected identities and follow the approved restoration runbook.</p></details>
+</article>
+<article class="incident">
+  <header><span class="tag high">HIGH</span><span class="rule">MFA_PRESSURE</span></header>
+  <h2>MFA denial burst followed by approval</h2>
+  <p class="meta"><strong>Subject:</strong> synthetic.user10@example.invalid &nbsp; <strong>Confidence:</strong> medium &nbsp; <strong>Window:</strong> 2026-11-03T08:52:00Z – 2026-11-03T09:03:00Z</p>
+  <p>Repeated MFA denials were followed by an approval.</p><p><strong>Next verification:</strong> Confirm whether the user initiated the MFA flow; review MFA method, originating device and access context.</p>
+  <details><summary>Evidence (7 events)</summary><p>evt-0017, evt-0018, evt-0019, evt-0020, evt-0021, evt-0022, evt-0023</p><p>Sources: Entra ID</p></details>
+  <details><summary>Analyst narrative</summary><p>Observed pattern: Repeated MFA denials were followed by an approval. There are 7 supporting events from 1 source system(s). This alert establishes a correlation, not a confirmed root cause. Suggested next step: Confirm whether the user initiated the MFA flow; review MFA method, originating device and access context.</p></details>
+</article>
+<article class="incident">
+  <header><span class="tag high">HIGH</span><span class="rule">DISABLED_ACCOUNT_SIGNIN</span></header>
+  <h2>Successful sign-in after account disable</h2>
+  <p class="meta"><strong>Subject:</strong> synthetic.user12@example.invalid &nbsp; <strong>Confidence:</strong> medium &nbsp; <strong>Window:</strong> 2026-11-03T09:10:00Z – 2026-11-03T09:13:00Z</p>
+  <p>A sign-in succeeded after an account-disable event.</p><p><strong>Next verification:</strong> Verify disable propagation, application sessions and identity mapping across source systems.</p>
+  <details><summary>Evidence (2 events)</summary><p>evt-0024, evt-0025</p><p>Sources: Active Directory, Entra ID</p></details>
+  <details><summary>Analyst narrative</summary><p>Observed pattern: A sign-in succeeded after an account-disable event. There are 2 supporting events from 2 source system(s). This alert establishes a correlation, not a confirmed root cause. Suggested next step: Verify disable propagation, application sessions and identity mapping across source systems.</p></details>
+</article>
+<article class="incident">
+  <header><span class="tag medium">MEDIUM</span><span class="rule">AUTH_FAILURE_BURST</span></header>
+  <h2>Authentication failure burst followed by success</h2>
+  <p class="meta"><strong>Subject:</strong> synthetic.user09@example.invalid &nbsp; <strong>Confidence:</strong> medium &nbsp; <strong>Window:</strong> 2026-11-03T08:42:00Z – 2026-11-03T08:49:00Z</p>
+  <p>Repeated authentication failures were followed by success.</p><p><strong>Next verification:</strong> Review device, IP, sign-in context and account ownership; do not assume malicious activity from counts alone.</p>
+  <details><summary>Evidence (7 events)</summary><p>evt-0010, evt-0011, evt-0012, evt-0013, evt-0014, evt-0015, evt-0016</p><p>Sources: Okta</p></details>
+  <details><summary>Analyst narrative</summary><p>Observed pattern: Repeated authentication failures were followed by success. There are 7 supporting events from 1 source system(s). This alert establishes a correlation, not a confirmed root cause. Suggested next step: Review device, IP, sign-in context and account ownership; do not assume malicious activity from counts alone.</p></details>
+</article>
+<footer>Generated 2026-11-06T21:19:55.010133Z · Analyst verification required · No access changes performed · Synthetic data only</footer>
+</main></body></html>
