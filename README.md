@@ -6,6 +6,32 @@ A portfolio-grade Python MVP for security and IAM operations teams. It ingests n
 
 > **Important:** The repository ships with fictional identities under `example.invalid`. This is a demo, **not** a validated production detection engine or a live connector to any vendor product. Do not upload confidential or real employee event data to publicly hosted demos.
 
+## Portfolio overview
+
+**[Guided two-minute walkthrough](docs/PORTFOLIO_WALKTHROUGH.md)** · **[Reproducible fixture evaluation](evaluation/README.md)** · **[Source architecture](docs/ARCHITECTURE.md)**
+
+| Engineering result | Verified synthetic-fixture observation |
+| --- | --- |
+| Identity events processed | **29** |
+| Distinct rule-based incident patterns | **5** |
+| Expected evidence signatures reproduced | **5 of 5**, zero extra matches |
+| Negative-control events with findings | **0 of 4** |
+| Privileged access changes or live tenant operations | **None** |
+
+These checks run against deliberately authored synthetic scenarios. **5/5 is not an independently estimated detection precision or security coverage.** LLM explanations are optional and do not influence incident detection.
+
+```mermaid
+flowchart LR
+    A["Synthetic identity logs"] --> B["Validate and normalize"]
+    B --> C["5 auditable correlation rules"]
+    C --> D["Evidence-linked incident findings"]
+    D --> E["HTML · JSON · CSV demo"]
+    D -. "explicit opt-in; minimized metadata" .-> F["Local Ollama explanation"]
+    F -. "draft text only" .-> E
+```
+
+A practical interview demo: open the HTML report, expand the connector outage and offboarding finding, show their exact source event IDs, then run `python -m evaluation.evaluate` to demonstrate reproducibility. For the limitations and architecture tradeoffs, see the walkthrough.
+
 ## Preview
 
 Open [the example investigation report](docs/index.html) in a browser. It is standalone HTML, generated from the included synthetic dataset, and needs no server. You can also try the optional Streamlit UI to upload a test file, inspect findings and export reports.
